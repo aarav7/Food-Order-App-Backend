@@ -13,7 +13,7 @@ mongoose.connect(process.env.CONNECTION_STRING, {
 app.use(cors());
 app.use("/meals", mealsRouter);
 app.get("/", (req, res) => {
-  res.status(200).send("Server Listening on PORT 5000");
+  res.status(200).send("Server listening on PORT" + " " + PORT);
 });
 
 const PORT = process.env.PORT || 5000;
